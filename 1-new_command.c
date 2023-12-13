@@ -19,6 +19,7 @@ char *new_command(void)
     if (status == -1)
     {
         free(line);
+        line = NULL;
         return (NULL);
     }
     return (line);
