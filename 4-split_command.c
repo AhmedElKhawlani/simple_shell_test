@@ -28,6 +28,7 @@ char **split_command(char *command)
     if (!splitted)
     {
         free(command);
+        command = NULL;
         return(NULL);
     }
     part = strtok(command, "\n\t ");
@@ -38,5 +39,6 @@ char **split_command(char *command)
     }
     splitted[i] = NULL;
     free(command);
+    command = NULL;
     return (splitted);
 }
