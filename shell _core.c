@@ -24,8 +24,10 @@ int main()
         {
             printf("%s\n",splitted_command[test]);
             free(splitted_command[test]);
+            splitted_command[test] = NULL;
             test++;
         }
         free(splitted_command);
+        splitted_command = NULL;
     }
 }
